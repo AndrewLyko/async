@@ -8,3 +8,13 @@ def gen():
 
 g = gen()
 print(inspect.getgeneratorstate(g))
+print(next(g))
+print(inspect.getgeneratorstate(g))
+print(next(g))
+
+try:
+    next(g)
+except StopIteration:
+    pass
+
+print(inspect.getgeneratorstate(g))
